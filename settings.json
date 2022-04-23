@@ -1,0 +1,7 @@
+{
+    "debug": "gray",
+    "info": "green",
+    "warning": "yellow",
+    "critical": "red",
+    "error": "red"
+}

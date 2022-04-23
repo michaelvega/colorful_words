@@ -20,8 +20,11 @@ Other Functions:
     * onlyLowerCaseAlpha - returns formatted text with only lowercase, alphabetical characters
 
 """
-
+import logging
+import random
 import re
+
+from ColorfulWords.randword import randword
 
 
 def printRed(text: str) -> None:
@@ -105,6 +108,41 @@ def printBlack(text: str) -> None:
     print(f"\033[30m {text}\033[00m")
 
 
+def random_color_word() -> None:
+    """
+        Prints random word in a random color.
+        :return: None
+    """
+    print_color_map = {
+        "red": printRed,
+        "green": printGreen,
+        "yellow": printYellow,
+        "blue": printBlue,
+        "purple": printPurple,
+        "cyan": printCyan,
+        "gray": printGray,
+        "white": printWhite,
+        "black": printBlack
+    }
+
+    selected_color = random.choice([
+        "Red",
+        "Green",
+        "Yellow",
+        "Blue",
+        "Purple",
+        "Cyan",
+        "Gray",
+        "White",
+        "Black"
+    ])
+
+    selected_color = onlyLowerCaseAlpha(selected_color)
+    selected_color_code = str(colorCode(selected_color))
+    logging.debug(f"Random Color: \33[{selected_color_code}m{selected_color}\33[0m")
+    print_color_map[selected_color](randword())
+
+
 def colorCode(color: str) -> int:
     """
     Returns ANSI code of inputted color as an int. Number can be used to properly format colors in terminal.
@@ -125,7 +163,10 @@ def colorCode(color: str) -> int:
         "white": 97,
         "black": 30
     }
-    return int(color_map[color_formatted])
+    if color_formatted not in color_map.keys():
+        raise KeyError("Not a supported Color")
+    else:
+        return int(color_map[color_formatted])
 
 
 def onlyLowerCaseAlpha(text: str) -> str:
