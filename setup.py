@@ -11,12 +11,11 @@ README = (HERE / "readme.MD").read_text()
 setup(
     name="colorful_words",
     version="1.0.0",
-    description="Read the latest Real Python tutorials",
+    description="Package adds many functionalities related to outputting text and logs in color.",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/realpython/reader",
-    author="Real Python",
-    author_email="YOUR_EMAIL_ADDRESS_HERE",
+    url="https://github.com/michaelvega/colorful_words",
+    author="Michael Vega",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
