@@ -36,3 +36,29 @@ Package adds many functionalities related to outputting text in color, listed be
 * **main** - If used as a script or with -m commands. Prints random word in random color.
 
 `Requirements:` This package requires that packages in the requirements.txt file be installed within the Python environment you are importing this package to.
+
+## Start Guide
+### For Help
+```commandline
+python -m ColorfulWords -h
+```
+
+### To enable logging, import the colorlogging.py module
+```doctest
+import ColorfulWords.colorlogging
+```
+or
+```doctest
+from ColorfulWords import colorlogging
+```
+
+### To change log color:
+```commandline
+python -m ColorfulWords debug white
+```
+
+### Example
+To utilize one of the functions listed above:
+```doctest
+from ColorfulWords.colorprinting import printRed
+```
