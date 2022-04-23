@@ -56,9 +56,17 @@ from ColorfulWords import colorlogging
 ```commandline
 python -m ColorfulWords debug white
 ```
+or edit the settings.json file:
+```json
+{
+  "debug": "new color"
+}
+```
 
 ### Example
 To utilize one of the functions listed above:
 ```doctest
 from ColorfulWords.colorprinting import printRed
+
+printRed("Hello world!") # In red
 ```
