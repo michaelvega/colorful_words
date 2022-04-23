@@ -27,7 +27,7 @@ setup(
     install_requires=["certifi", "charset-normalizer", "feedparser", "html2text", "idna", "nose", "PyYAML", "Random-Word", "requests", "sgmllib3k", "urllib3"],
     entry_points={
         "console_scripts": [
-            "realpython=reader.__main__:main",
+            "colorful_words=ColorfulWords.__main__:main",
         ]
     },
 )
