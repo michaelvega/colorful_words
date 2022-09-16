@@ -1,7 +1,9 @@
 # ColorfulWords
 `version 1.0.0`
 
-Package adds many functionalities related to outputting text in color, listed below. If used as a script (or through python -m), main.py will edit debugging color specifications.  
+Package adds many functionalities related to outputting text in color, listed below. If used as a script (or through python -m), main.py will edit debugging color specifications.
+
+*Currently under testing at [test.pypi.org/project/colorful-words/](https://test.pypi.org/project/colorful-words/)*
 
 ### This package includes useful functionality:
 * Printing in color - colorprinting.py module
